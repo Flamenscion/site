@@ -1,0 +1,40 @@
+# ❌ Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ❌ Виртуальные окружения
+venv/
+myenv/
+.env/
+
+# ❌ Конфиденциальные файлы
+.env
+*.env
+
+# ❌ Логи
+*.log
+
+# ❌ VSCode
+.vscode/
+
+# ❌ ОС мусор
+.DS_Store
+Thumbs.db
+
+# ❌ Pytest
+.cache/
+.tox/
+.coverage
+htmlcov/
+
+# ❌ MySQL/SQLite/DB
+*.db
+*.sqlite3
+
+# ❌ Миграции Alembic (если используешь)
+migrations/
+
+# ❌ pyproject.lock
+poetry.lock
+Pipfile.lock

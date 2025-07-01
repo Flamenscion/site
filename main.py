@@ -34,7 +34,7 @@ async def create_user(user: UserCreate, db: AsyncSession = Depends(get_db)):
     await db.refresh(new_user)
 
     # ✅ Отправка письма админу
-    send_user_email(name=user.name, phone=user.phone, to_email="shamatai.sultan05@gmail.com")
+    send_user_email(name=user.name, phone=user.phone, to_email="evelyn9067464@gmail.com")
 
     return new_user
 
