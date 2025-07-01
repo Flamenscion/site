@@ -22,6 +22,8 @@ myenv/
 .DS_Store
 Thumbs.db
 
+utils/__pycache__/
+
 # ❌ Pytest
 .cache/
 .tox/

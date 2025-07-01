@@ -5,8 +5,8 @@ from email.mime.multipart import MIMEMultipart
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-EMAIL = "metraa2004@gmail.com"  # 🔒 твоя почта
-APP_PASSWORD = "lgpwwegfatoqujjl"  # 🔐 пароль приложения
+EMAIL = "metraa2004@gmail.com" 
+APP_PASSWORD = "lgpwwegfatoqujjl"  
 
 def send_user_email(name: str, phone: str, to_email: str):
     subject = "Новый пользователь добавлен ✅"
