@@ -7,6 +7,11 @@ from models import User
 from database import get_db
 from schemas import UserCreate, UserRead
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
+
 # 📩 Импорт отправки письма
 from utils.email_sender import send_user_email
 
@@ -34,7 +39,7 @@ async def create_user(user: UserCreate, db: AsyncSession = Depends(get_db)):
     await db.refresh(new_user)
 
     # ✅ Отправка письма админу
-    send_user_email(name=user.name, phone=user.phone, to_email="evelyn9067464@gmail.com")
+    send_user_email(name=user.name, phone=user.phone, to_email=ADMIN_EMAIL)
 
     return new_user
 
