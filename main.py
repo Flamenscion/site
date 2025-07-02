@@ -6,6 +6,8 @@ import models, database
 from models import User
 from database import get_db
 from schemas import UserCreate, UserRead
+from fastapi.middleware.cors import CORSMiddleware
+
 
 import os
 from dotenv import load_dotenv
@@ -16,6 +18,11 @@ ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
 from utils.email_sender import send_user_email
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"]
+)
 
 @app.on_event("startup")
 async def on_startup():
